@@ -4,7 +4,7 @@ So, you want to start using the bunq API, awesome! To do this, you have to open 
 
 ## Getting an API key
 
-The only way to **get a production API key** is to generate it from within the bunq app \(_Profile → Security & Settings → Developers → API keys\)_. As for sandbox API keys, there are [4 ways you can create them](https://lexy.gitbook.io/bunq/basics/sandbox#sandbox-api-keys).
+The only way to **get a production API key** is to generate it from within the bunq app \(_Profile → Security & Settings → Developers → API keys\)_. As for sandbox API keys, there are [4 ways you can create them](https://beta.doc.bunq.com/basics/sandbox#sandbox-api-keys).
 
 {% hint style="info" %}
 * Production API keys are only usable on the production and sandbox API keys are only usable on the sandbox. 
@@ -17,13 +17,13 @@ Before you can start a session, you need to register your API key, device and IP
 
 ### 1. POST /installation
 
-Each [call needs to be signed ](https://lexy.gitbook.io/bunq/basics/authentication/signing)with your own private key. An Installation is used to tell the server about the public key of your key pair. The server uses this key to verify you are sending the subsequent calls.
+Each [call needs to be signed ](https://beta.doc.bunq.com/basics/authentication/signing)with your own private key. An Installation is used to tell the server about the public key of your key pair. The server uses this key to verify you are sending the subsequent calls.
 
 Start by generating a[ 2048-bit RSA key pair](https://en.wikipedia.org/wiki/RSA_%28cryptosystem%29). You can find examples in the source code of [our SDKs](https://github.com/bunq).
 
 #### **Headers**
 
-On the [headers page](https://lexy.gitbook.io/bunq/basics/headers), you can find out about the mandatory headers. Make sure to set an `Authorization` header if you are working in the sandbox environment. 
+On the [headers page](https://beta.doc.bunq.com/basics/headers), you can find out about the mandatory headers. Make sure to set an `Authorization` header if you are working in the sandbox environment. 
 
 {% hint style="info" %}
 You do not need to use the `X-Bunq-Client-Authentication` or `X-Bunq-Client-Signature`headers in the `POST /installation`call.
@@ -45,7 +45,7 @@ All the following calls made to the server must be sent from a registered device
 
 Use the _Token_ you received in the `X-Bunq-Client-Authentication`header of the response to `POST /installation`. 
 
-* [ ] Make sure you sign your call, passing the [call signature](https://lexy.gitbook.io/bunq/basics/authentication/signing) in the`X-Bunq-Client-Signature` header.
+* [ ] Make sure you sign your call, passing the call signature in the`X-Bunq-Client-Signature` header.
 
 #### **Body**
 

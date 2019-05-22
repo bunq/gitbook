@@ -101,7 +101,7 @@ To decide how you are going to make your tab visible, pass a visibility object i
 
 Set `cash_register_qr_code` _true_ to connect the tab to the QR code from the cash register. If this cash register does not have a QR code yet, it is created automatically. 
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Only one Tab can be connected to the QR code of the cash register at a time.
 {% endhint %}
 

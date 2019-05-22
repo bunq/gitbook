@@ -16,8 +16,8 @@ Once a bunq user has confirmed they want to connect their account via your appli
 2. Initiate an authorization request. If your identity is validated, we will send you a confirmation upon its creation. Pass the following parameters with the request:
    * _response\_type_
    * _client\_id_ \(here _response\_type=code&client\_id_\)
-   * \*redirect\_uri
-   * \*state
+   * _\*redirect\_uri_
+   * _\*state_
 3. If the bunq user confirms their will to let your application connect to their account, we will return you a Code.
 4. Exchange the _Code_ for an _Access Token_. Make a `POST` call to `https://api.oauth.bunq.com/v1/token` passing the following parameters:
    * _code \(at this stage, grant\_type=authorization\_code&code\)_

@@ -42,8 +42,8 @@ If you do not own an Android device to run our Sandbox app on, you can do it usi
 * Run `tinker/user-overview` to create a sandbox account.
 * The output of the command will include the login credentials for the sandbox account.
 
-{% hint style="info" %}
-It is **NOT** possible to create sandbox accounts using the sandbox app. bunq does review Sandbox applications.
+{% hint style="warning" %}
+It is **NOT** possible to create sandbox accounts using the sandbox app. bunq does not review Sandbox account applications.
 {% endhint %}
 
 ### Creating a new API key

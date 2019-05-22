@@ -6,6 +6,8 @@ As a service provider, either an Account Information Service Provider \(AISP\) o
 You can test how it works in our sandbox. It is currently not available on production.
 {% endhint %}
 
+{% page-ref page="../../basics/sandbox/" %}
+
 We currently accept pseudo certificates so you could test the flow. You are free to create the certificate yourself but make sure to follow these criteria:
 
 * Up to 64 characters

@@ -26,7 +26,7 @@ The User-Agent header field must contain information about the user agent origin
 
 The X-Bunq-Language header must carry the preferred language indicator. The value of this header must follow this format: _an ISO 639-1 language code_ plus _a ISO 3166-1 alpha-2 country code_ separated by an underscore.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 We currently only support _en\_US_ and _nl\_NL_. Any other language will default to _en\_US_.
 {% endhint %}
 
@@ -115,7 +115,9 @@ X-Bunq-Server-Signature:
 XBBwfDaOZJapvcBpAIBT1UOmczKqJXLSpX9ZWHsqXwrf1p+H+eON+TktYksAbmkSkI4gQghw1AUQSJh5i2c4+CTuKdZ4YuFT0suYG4sltiKnmtwODOFtu1IBGuE5XcfGEDDSFC+zqxypMi9gmTqjl1KI3WP2gnySRD6PBJCXfDxJnXwjRkk4kpG8Ng9nyxJiFG9vcHNrtRBj9ZXNdUAjxXZZFmtdhmJGDahGn2bIBWsCEudW3rBefycL1DlpJZw6yRLoDltxeBo7MjgROBpIeElh5qAz9vxUFLqIQC7EDONBGbSBjaXS0wWrq9s2MGuOi9kJxL2LQm/Olj2g==
 ```
 
-The header contains the signature of the bunq server for this response. See the [signing page](https://lexy.gitbook.io/bunq/basics/authentication/signing) for details on how to verify this signature.
+The header contains the signature of the bunq server for this response. See the signing page for details on how to verify this signature.
+
+{% page-ref page="authentication/signing.md" %}
 
 ### Warning header
 

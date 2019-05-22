@@ -33,8 +33,10 @@ We call this intro "creating an API context". There are a couple of ways to carr
 3. Find and use the part dedicated to creating an API context.
 
 {% hint style="info" %}
-[Run Tinker](https://lexy.gitbook.io/bunq/quickstart/tinker) to see a sample project using bunq SDK in action.
+[Run Tinker](https://beta.doc.bunq.com/quickstart/tinker) to see a sample project using bunq SDKs in action.
 {% endhint %}
+
+{% page-ref page="../../quickstart/tinker.md" %}
 
 ### Using our API directly
 

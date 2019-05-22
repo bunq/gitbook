@@ -17,5 +17,7 @@ We highly recommend using a standard production API Key instead of a [Wildcard A
 Please be aware that if you will gain access to account information of other bunq users or initiate a payment for them, you require a PSD2 permit.
 {% endhint %}
 
+{% page-ref page="../psd2/connect-as-a-psd2-service-provider/" %}
+
 
 

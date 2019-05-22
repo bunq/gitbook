@@ -10,17 +10,21 @@
 
 ### July 9, 2019
 
-We are deprecating the following share-invite-bank endpoints:
+We are deprecating the following share-invite-bank endpoints on **July 9, 2019**:
 
-* [share-invite-bank-inquiry](https://doc.bunq.com/#/share-invite-bank-inquiry)
-* share-invite-bank-inquiry/{ID}/{amount-used\)
-* [share-invite-bank-response](https://doc.bunq.com/#/share-invite-bank-response)
+* `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-bank-inquiry`
+* `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-bank-inquiry/{itemId}`
+* `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-bank-inquiry/{share-invite-bank-inquiryID}/amount-used/{itemId}`
+* `/user/{userID}/share-invite-bank-response`
+* `/user/{userID}/share-invite-bank-response/{itemId}`
 
 You can use the following endpoints instead:
 
-* share-invite-monetary-account-inquiry
-* share-invite-monetary-account-inquiry/ID/amount-used
-* share-invite-monetary-account-response
+* `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-monetary-account-inquiry`
+* `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-monetary-account-inquiry/{itemId}`
+* `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-monetary-account-inquiry/{share-invite-monetary-account-inquiryID}/amount-used/{itemId}`
+* `/user/{userID}/share-invite-monetary-account-response`
+* `/user/{userID}/share-invite-monetary-account-response/{itemId}`
 
 ### October 8, 2019
 
@@ -28,9 +32,20 @@ We are deprecating creating push notifications through updating _notification\_f
 
 Instead, we are introducing separate endpoints for the callbacks and notifications.
 
-* /v1/user/332/notification-filter-push
-* /v1/user/332/notification-filter-url
-* /v1/user/336/monetary-account/49/notification-filter-url
+* `/v1/user/{userID}/notification-filter-push`
+* `/v1/user/{userID}/notification-filter-url`
+* `/v1/user/{userID}/monetary-account/{monetary-accountID}/notification-filter-push`
+* `/v1/user/{userID}/monetary-account/{monetary-accountID}/notification-filter-url`
+
+{% hint style="warning" %}
+**NOTE:** When used via OAuth, the created push notifications expire in 90 days.
+{% endhint %}
+
+### October 9, 2019
+
+We are replacing _primary\_account\_numbers\_virtual_ and _primary\_account\_number\_four\_digit_ from the [card](https://doc.bunq.com/?utm_source=What%27s+new+with+the+bunq+API&utm_campaign=d65e4c4f05-API_Partners&utm_medium=email&utm_term=0_0aa6b52aaa-d65e4c4f05-#/card) resource with _primary\_account\_numbers_.  
+  
+The field will return the same string for _primary\_account\_numbers_ and the same field + canceled cards for _primary\_account\_numbers\_virtual_.
 
 ## Released
 
