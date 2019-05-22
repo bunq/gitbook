@@ -1,9 +1,5 @@
 # Tab payment
 
-{% hint style="info" %}
-A **tab payment** is a payment made via a browser or POS tab. 
-{% endhint %}
-
 This tutorial will help you create a tab that can be paid once by a single user \(a so-called TagUsageSingle\). It explains two ways to make the Tab visible to your customers:
 
 * QR code from the CashRegister
