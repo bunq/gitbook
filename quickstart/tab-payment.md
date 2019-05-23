@@ -89,7 +89,7 @@ Make sure the sum of the item prices equals the `total_amount` of the tab when y
 
 ### 7. PUT /tab-usage-single
 
-Once the tab is ready for a customer to pay for the order, update the status of the tab to `WAITING_FOR_PAYMENT`. This will make the tab visible to your costumers.
+Once the tab is ready for a customer to pay for the order, update the status of the tab to `WAITING_FOR_PAYMENT`. This will make the tab visible to your customers.
 
 #### **Visibility**
 
