@@ -53,9 +53,9 @@ The payload of this request is the `uuid` of the attachment public.
 
 #### **Body**
 
-* Provide the `uuid` of the avatar you created for this cash register. 
-* Make sure to provide a unique name for your cash register. 
-* Change the status of the cash register to `PENDING_APPROVAL`.
+* [ ] Provide the `uuid` of the avatar you created for this cash register. 
+* [ ] Make sure to provide a unique name for your cash register. 
+* [ ] Change the status of the cash register to `PENDING_APPROVAL`.
 
 #### **Response**
 
@@ -72,8 +72,8 @@ The response contains the `id` of the cash register you created. Save this `id`.
 
 #### **Body**
 
-* Give the tab a name in `merchant_reference`. 
-* Create the tab with the `OPEN` status and give the tab a starting amount. You can update this amount later.
+* [ ] Give the tab a name in `merchant_reference`. 
+* [ ] Create the tab with the `OPEN` status and give the tab a starting amount. You can update this amount later.
 
 #### **Response**
 
@@ -81,7 +81,7 @@ The response contains the `uuid` of the tab you created.
 
 ### 6. POST /tab-item \(optional\)
 
-You can add items to a tab. This will display the products or services the customer is going to pay for. Adding items to a tab is does not change the total amount of the tab itself. 
+You can add items to a tab. This will display the products or services the customer is going to pay for. Adding items to a tab is does not change the total amount of the tab itself.
 
 {% hint style="info" %}
 Make sure the sum of the item prices equals the `total_amount` of the tab when you change its status to `WAITING_FOR_PAYMENT`.
@@ -95,7 +95,7 @@ Once the tab is ready for a customer to pay for the order, update the status of 
 
 To decide how you are going to make your tab visible, pass a visibility object in the payload.
 
-Set `cash_register_qr_code` _true_ to connect the tab to the QR code from the cash register. If this cash register does not have a QR code yet, it is created automatically. 
+Set `cash_register_qr_code` _true_ to connect the tab to the QR code from the cash register. If this cash register does not have a QR code yet, it is created automatically.
 
 {% hint style="warning" %}
 Only one Tab can be connected to the QR code of the cash register at a time.
