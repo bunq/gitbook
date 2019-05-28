@@ -34,9 +34,10 @@
 
 ## links
 
-* [Terms of use](http://bunq.com/terms-api/)
-* [Swagger file](https://raw.githubusercontent.com/bunq/doc/master/swagger.json)
-* [Developer blog](https://medium.com/bunq/tagged/developer)
-* [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.html)
 * [Status Page](https://status.bunq.com/)
+* [Developer blog](https://medium.com/bunq/tagged/developer)
+* [Swagger file](https://raw.githubusercontent.com/bunq/doc/master/swagger.json)
+* [Terms of use](http://bunq.com/terms-api/)
+* [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.html)
+* [Subscribe to our API updates](http://eepurl.com/gs1IrX)
 
