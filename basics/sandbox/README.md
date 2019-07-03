@@ -4,13 +4,15 @@
 We do not use real money and do not allow external transactions in the sandbox environment. 
 {% endhint %}
 
+Use ![Run in Postman](https://run.pstmn.io/button.svg)to import the bunq API Postman collection connected to the Sandbox environment by default.
+
 ## Sandbox API keys
 
 There are 4 ways to generate a bunq sandbox API key:
 
 1. create it from the [sandbox app](https://lexy.gitbook.io/bunq/basics/sandbox/android-emulator)
 2. [connect to Tinker](https://lexy.gitbook.io/bunq/quickstart/tinker) _\(it will auto connect you to the sandbox\)_
-3. [use Postman](https://github.com/bunq/postman)
+3. [use Postman](https://github.com/bunq/postman) _\(&lt;-- both the Sandbox and Production environments\)_
 4. run the cURL command
 
 `curl https://public-api.sandbox.bunq.com/v1/sandbox-user -X POST --header "Content-Type: application/json" --header "Cache-Control: none" --header "User-Agent: curl-request" --header "X-Bunq-Client-Request-Id: $(date)randomId" --header "X-Bunq-Language: nl_NL" --header "X-Bunq-Region: nl_NL" --header "X-Bunq-Geolocation: 0 0 0 0 000"`
