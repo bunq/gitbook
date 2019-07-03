@@ -69,6 +69,16 @@ _The IP addresses might change_. We will notify you in a timely fashion if such 
 
 When the execution of a callback fails \(e.g. the callback server is down or the response contains an error\), we try to resend it for a maximum of 5 times, with an interval of one minute between each try. If your server is not reachable by the callback after the 6th total try, the callback is not sent anymore.
 
+### Removing callbacks
+
+To remove callbacks for an object, send a PUT request to the _user-person_, _user-company_, _monetary-account_ or _cash-register_ resource with the `notification_filters` field of the JSON request body unset. 
+
+```text
+{
+    "notification_filters": []
+}
+```
+
 ## Certificate Pinning
 
 We recommend that you use certificate pinning as an extra security measure. We will check if the certificate of the recipient server matches the pinned certificate that you provided and cancel the callback if the check fails or we detect a mismatch.
