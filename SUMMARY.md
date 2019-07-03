@@ -21,6 +21,7 @@
 ## Quickstart
 
 * [SDKs](https://github.com/bunq)
+* [Postman](https://github.com/bunq/postman/)
 * [Tinker](quickstart/tinker.md)
 * [Opening a Session](quickstart/opening-a-session.md)
 * [Payment request](quickstart/payment-request.md)
