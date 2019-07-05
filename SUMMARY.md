@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 
-## basics
+## Basics
 
 * [OAuth](basics/oauth.md)
 * [Authentication](basics/authentication/README.md)
@@ -33,7 +33,7 @@
   * [AISP](psd2/connect-as-a-psd2-service-provider/aisp.md)
   * [PISP](psd2/connect-as-a-psd2-service-provider/initiate-payments-as-a-pisp.md)
 
-## links
+## Links
 
 * [Status Page](https://status.bunq.com/)
 * [Developer blog](https://medium.com/bunq/tagged/developer)
