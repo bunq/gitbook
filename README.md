@@ -11,6 +11,10 @@ The bunq API is based on the RESTful principles. It returns responses in the JSO
 3. **Open a session.** Sessions are temporary and expire in the same amount of time you have set for auto logout in your user account.
 4. **Make your first call!**
 
+Here is an overview of what you can use to get started with the bunq API: 
+
+![](.gitbook/assets/getting-started-with-the-bunq-api-matrix.png)
+
 {% hint style="info" %}
 Looking to start with the sandbox environment first? Jump to the [Sandbox page](https://beta.doc.bunq.com/basics/sandbox).
 {% endhint %}
