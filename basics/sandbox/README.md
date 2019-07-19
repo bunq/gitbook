@@ -11,7 +11,7 @@ Use ![Run in Postman](https://run.pstmn.io/button.svg)to import the bunq API Pos
 There are 4 ways to generate a bunq sandbox API key:
 
 1. create it from the [sandbox app](https://lexy.gitbook.io/bunq/basics/sandbox/android-emulator)
-2. [connect to Tinker](https://lexy.gitbook.io/bunq/quickstart/tinker) _\(it will auto connect you to the sandbox\)_
+2. [connect to Tinker](https://lexy.gitbook.io/bunq/quickstart/tinker) _\(it will auto connect you to the sandbox; you can also use it to generate test users with working credentials for the sandbox bunq app\)_
 3. [use Postman](https://github.com/bunq/postman) _\(&lt;-- both the Sandbox and Production environments\)_
 4. run the cURL command
 
