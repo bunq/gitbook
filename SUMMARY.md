@@ -33,7 +33,7 @@
   * [AISP](psd2/connect-as-a-psd2-service-provider/aisp.md)
   * [PISP](psd2/connect-as-a-psd2-service-provider/initiate-payments-as-a-pisp.md)
 
-## Links
+## Other
 
 * [Status Page](https://status.bunq.com/)
 * [Developer blog](https://medium.com/bunq/tagged/developer)
@@ -41,5 +41,6 @@
 * [Terms of use](http://bunq.com/terms-api/)
 * [Subscribe to our API updates](http://eepurl.com/gs1IrX)
 * [How should you get started with the bunq API?](https://bunqsurvey.typeform.com/to/B6RSG4)
+* [FAQ](other/faq.md)
 * [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.html)
 
