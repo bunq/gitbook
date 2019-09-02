@@ -1,37 +1,39 @@
 # Callbacks
 
-Callbacks are used to send real-time notifications on the events that happen on a bunq account. The updates information is sent to a URL of your choice.
+Callbacks are used to send real-time notifications on the events that happen on a bunq account. 
+
+To receive notifications for certain events on a bunq account, you need to create notification filters. It is possible to send the notifications to a provided URL and/or the user’s phone as push notifications.
 
 ## Notification Filters
 
-To subscribe to specific events from a bunq account, you have to create notification filters. In practice, this means updating the UserPerson, UserCompany, MonetaryAccount or CashRegister object with `notification_filters`.
+Use the `notification-filter-push` resource to create and manage _push notification filters_. Provide the type of events you want to receive notifications about in the `category` field. 
 
-Here is what the `notification_filters` object looks like:
+Example request body:
 
 ```text
 {
-    "notification_filters": [
-        {
-            "notification_delivery_method": "URL",
-            "notification_target": “{YOUR_CALLBACK_URL}",
-            "category": "REQUEST"
-        },
-        {
-            "notification_delivery_method": "URL",
-            "notification_target": "{YOUR_CALLBACK_URL}",
-            "category": "PAYMENT"
-        }
-    ]
+   "notification_filters":[
+      {
+         "category":"SCHEDULE_RESULT"
+      }
+   ]
 }
 ```
 
-### Notification Filter Fields
+Use the `notification-filter-url` resource to create and manage _URL notification filters_. The callback URL you provide in the notification\_target field must use HTTPS. 
 
-* `notification_delivery_method`: specify the delivery method: 
-  * URL \(_for sending an HTTP request to the provided URL\)._  Choose this method to receive callbacks.
-  * PUSH _\(for sending a push notification to user's phone\)._
-* `notification_target`: provide the URL you want to receive the callbacks on. This URL must use HTTPS.
-* `category`: specify the types of events you would like to receive callbacks on.
+Example request body:
+
+```text
+{
+   "notification_filters":[
+      {
+         "category":"PAYMENT",
+         "notification_target":"{YOUR_CALLBACK_URL}"
+      }
+   ]
+}
+```
 
 ### Callback categories
 
