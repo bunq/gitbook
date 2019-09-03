@@ -2,30 +2,6 @@
 
 ## Upcoming changes
 
-### July 2, 2019
-
-1. The _type_ field is becoming mandatory for [_card-debit_](https://doc.bunq.com/#/card-debit)_._
-2. We are deprecating the _applied\_limit_ field from the [mastercard\_action](https://doc.bunq.com/#/mastercard-action) responses.
-3. We are removing the _activation\_code_ field from [CardUpdate](https://doc.bunq.com/#/card/Update_Card_for_User). Instead of using the field, set the status ACTIVE when the card has been ACCEPTED\_FOR\_PRODUCTION.
-
-### July 9, 2019
-
-We are deprecating the following share-invite-bank endpoints on **July 9, 2019**:
-
-* `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-bank-inquiry`
-* `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-bank-inquiry/{itemId}`
-* `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-bank-inquiry/{share-invite-bank-inquiryID}/amount-used/{itemId}`
-* `/user/{userID}/share-invite-bank-response`
-* `/user/{userID}/share-invite-bank-response/{itemId}`
-
-You can use the following endpoints instead:
-
-* `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-monetary-account-inquiry`
-* `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-monetary-account-inquiry/{itemId}`
-* `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-monetary-account-inquiry/{share-invite-monetary-account-inquiryID}/amount-used/{itemId}`
-* `/user/{userID}/share-invite-monetary-account-response`
-* `/user/{userID}/share-invite-monetary-account-response/{itemId}`
-
 ### October 8, 2019
 
 We are deprecating creating push notifications through updating _notification\_filters_ in the User and MonetaryAccount objects.
@@ -48,6 +24,34 @@ We are replacing _primary\_account\_numbers\_virtual_ and _primary\_account\_num
 The field will return the same string for _primary\_account\_numbers_ and the same field + canceled cards for _primary\_account\_numbers\_virtual_.
 
 ## Released
+
+### August 29, 2019
+
+We have added the support of [callbacks](https://beta.doc.bunq.com/basics/callbacks) to OAuth.
+
+### July 9, 2019
+
+We have deprecated the following share-invite-bank endpoints:
+
+* `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-bank-inquiry`
+* `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-bank-inquiry/{itemId}`
+* `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-bank-inquiry/{share-invite-bank-inquiryID}/amount-used/{itemId}`
+* `/user/{userID}/share-invite-bank-response`
+* `/user/{userID}/share-invite-bank-response/{itemId}`
+
+You can use the following endpoints instead:
+
+* `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-monetary-account-inquiry`
+* `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-monetary-account-inquiry/{itemId}`
+* `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-monetary-account-inquiry/{share-invite-monetary-account-inquiryID}/amount-used/{itemId}`
+* `/user/{userID}/share-invite-monetary-account-response`
+* `/user/{userID}/share-invite-monetary-account-response/{itemId}`
+
+### July 2, 2019
+
+1. The _type_ field has become mandatory for [_card-debit_](https://doc.bunq.com/#/card-debit)_._
+2. We have deprecated the _applied\_limit_ field from the [mastercard\_action](https://doc.bunq.com/#/mastercard-action) responses.
+3. We have removed the _activation\_code_ field from [CardUpdate](https://doc.bunq.com/#/card/Update_Card_for_User). Instead of using the field, set the status ACTIVE when the card has been ACCEPTED\_FOR\_PRODUCTION.
 
 ### April 18, 2019
 
