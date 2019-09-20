@@ -35,6 +35,7 @@ Here are our **rate limits per IP address per endpoint:**
 * **GET requests:** 3 requests within any 3 consecutive seconds
 * **POST requests:** 5 requests within any 3 consecutive seconds
 * **PUT requests:** 2 requests within any 3 consecutive seconds
+* **Callbacks:** 2 callback URLs per notification category
 
 {% hint style="info" %}
 We have a lower rate limit for `/session-server`: 1 request within 30 consecutive seconds.
