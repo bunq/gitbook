@@ -30,5 +30,37 @@ You can use Wildcard IP on the `device-server` step when using the token you get
 
 Open an in-app browser.
 
+## Do you have any examples of signing requests? 
 
+Use [our SDKs](https://github.com/bunq). They will handle signing for you.
+
+## Do you have any examples of how to register a PSD2 certificate correctly?
+
+Our SDKs contain examples and tests that will help you register as a service provider.
+
+### **C\# examples** 
+
+{% embed url="https://github.com/bunq/psd2\_sample\_csharp" %}
+
+{% embed url="https://github.com/bunq/sdk\_csharp/blob/develop/BunqSdk.Tests/Context/Psd2ApiContextTest.cs" %}
+
+{% embed url="https://github.com/bunq/tinker\_csharp/blob/develop/TinkerSrc/CreatePsd2Configuration.cs" %}
+
+### **PHP examples**
+
+{% embed url="https://github.com/bunq/sdk\_php/tree/develop/tests/Context/PSD2" %}
+
+{% embed url="https://github.com/bunq/sdk\_php/blob/develop/tests/Context/Psd2ApiContextTest.php" %}
+
+{% embed url="https://github.com/bunq/tinker\_php/blob/develop/tinker/create-psd2-configuration.php" %}
+
+### **Java examples**
+
+{% embed url="https://github.com/bunq/sdk\_java/blob/develop/src/test/java/com/bunq/sdk/context/Psd2ContextTest.java" %}
+
+{% embed url="https://github.com/bunq/tinker\_java/blob/develop/src/main/java/com/bunq/tinker/CreatePsd2Configuration.java" %}
+
+### **Python examples** 
+
+No examples yet, but we're working on it.
 
