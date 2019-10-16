@@ -8,21 +8,21 @@ Due to internal backend changes, all active [device-server](https://doc.bunq.com
 
 ### January 15, 2019
 
-We are deprecating the _limit\_card\_debit\_replacement_ field from `/v1/user/{user_id}/limit` and are replacing it with _limit\_card\_replacement_.
+We are removing the _limit\_card\_debit\_replacement_ field from `/v1/user/{user_id}/limit` and are replacing it with _limit\_card\_replacement_.
 
 ## Released
 
 ### October 9, 2019
 
-We are replacing _primary\_account\_numbers\_virtual_ and _primary\_account\_number\_four\_digit_ from the [card](https://doc.bunq.com/?utm_source=What%27s+new+with+the+bunq+API&utm_campaign=d65e4c4f05-API_Partners&utm_medium=email&utm_term=0_0aa6b52aaa-d65e4c4f05-#/card) resource with _primary\_account\_numbers_.  
+We have replaced _primary\_account\_numbers\_virtual_ and _primary\_account\_number\_four\_digit_ from the [card](https://doc.bunq.com/?utm_source=What%27s+new+with+the+bunq+API&utm_campaign=d65e4c4f05-API_Partners&utm_medium=email&utm_term=0_0aa6b52aaa-d65e4c4f05-#/card) resource with _primary\_account\_numbers_.  
   
-The field will return the same string for _primary\_account\_numbers_ and the same field + canceled cards for _primary\_account\_numbers\_virtual_.
+The field returns the same string for _primary\_account\_numbers_ and the same field + canceled cards for _primary\_account\_numbers\_virtual_.
 
 ### October 8, 2019
 
-We are deprecating creating push notifications through updating _notification\_filters_ in the User and MonetaryAccount objects.
+We have removed creating push notifications through updating _notification\_filters_ in the User and MonetaryAccount objects.
 
-Instead, we are introducing separate endpoints for the callbacks and notifications.
+Instead, we introduced separate endpoints for the callbacks and notifications.
 
 * `/v1/user/{userID}/notification-filter-push`
 * `/v1/user/{userID}/notification-filter-url`
@@ -39,7 +39,7 @@ We have added the support of [callbacks](https://beta.doc.bunq.com/basics/callba
 
 ### July 9, 2019
 
-We have deprecated the following share-invite-bank endpoints:
+We have removed the following share-invite-bank endpoints:
 
 * `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-bank-inquiry`
 * `/user/{userID}/monetary-account/{monetary-accountID}/share-invite-bank-inquiry/{itemId}`
