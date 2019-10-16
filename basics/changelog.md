@@ -2,6 +2,22 @@
 
 ## Upcoming changes
 
+### December 4, 2019
+
+Due to internal backend changes, all active [device-server](https://doc.bunq.com/#/device-server/Create_DeviceServer) installations created before April 9, 2019, will stop being validated on December 4, 2019. To communicate with the bunq API again, [create a new API context](https://beta.doc.bunq.com/basics/authentication#creating-api-context).
+
+### January 15, 2019
+
+We are deprecating the _limit\_card\_debit\_replacement_ field from `/v1/user/{user_id}/limit` and are replacing it with _limit\_card\_replacement_.
+
+## Released
+
+### October 9, 2019
+
+We are replacing _primary\_account\_numbers\_virtual_ and _primary\_account\_number\_four\_digit_ from the [card](https://doc.bunq.com/?utm_source=What%27s+new+with+the+bunq+API&utm_campaign=d65e4c4f05-API_Partners&utm_medium=email&utm_term=0_0aa6b52aaa-d65e4c4f05-#/card) resource with _primary\_account\_numbers_.  
+  
+The field will return the same string for _primary\_account\_numbers_ and the same field + canceled cards for _primary\_account\_numbers\_virtual_.
+
 ### October 8, 2019
 
 We are deprecating creating push notifications through updating _notification\_filters_ in the User and MonetaryAccount objects.
@@ -16,14 +32,6 @@ Instead, we are introducing separate endpoints for the callbacks and notificatio
 {% hint style="warning" %}
 **NOTE:** When used via OAuth, the created push notifications expire in 90 days.
 {% endhint %}
-
-### October 9, 2019
-
-We are replacing _primary\_account\_numbers\_virtual_ and _primary\_account\_number\_four\_digit_ from the [card](https://doc.bunq.com/?utm_source=What%27s+new+with+the+bunq+API&utm_campaign=d65e4c4f05-API_Partners&utm_medium=email&utm_term=0_0aa6b52aaa-d65e4c4f05-#/card) resource with _primary\_account\_numbers_.  
-  
-The field will return the same string for _primary\_account\_numbers_ and the same field + canceled cards for _primary\_account\_numbers\_virtual_.
-
-## Released
 
 ### August 29, 2019
 

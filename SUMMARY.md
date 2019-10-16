@@ -37,10 +37,10 @@
 
 * [Status Page](https://status.bunq.com/)
 * [Developer blog](https://medium.com/bunq/tagged/developer)
-* [Swagger file](https://raw.githubusercontent.com/bunq/doc/master/swagger.json)
-* [Terms of use](http://bunq.com/terms-api/)
 * [Subscribe to our API updates](http://eepurl.com/gs1IrX)
 * [How should you get started with the bunq API?](https://bunqsurvey.typeform.com/to/B6RSG4)
 * [FAQ](other/faq.md)
+* [Swagger file](https://raw.githubusercontent.com/bunq/doc/master/swagger.json)
+* [Terms of use](http://bunq.com/terms-api/)
 * [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.html)
 
