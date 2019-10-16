@@ -4,8 +4,6 @@
 We do not use real money and do not allow external transactions in the sandbox environment. 
 {% endhint %}
 
-Use ![Run in Postman](https://run.pstmn.io/button.svg)to import the bunq API Postman collection connected to the Sandbox environment by default.
-
 ## Sandbox API keys
 
 There are 4 ways to generate a bunq sandbox API key:
