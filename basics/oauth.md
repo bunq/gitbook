@@ -56,13 +56,17 @@ https://www.bunq.com/?code=7d272be434a75933f40c13d56aef6c31496005b653074f7d6ac57
 
 If the authorization request is accepted by the user, you get the authorization _Code._ Exchange it for an _Access Token_.
 
-Make a POST call to `https://api.oauth.bunq.com/v1/token` Pass the following parameters as GET variables:
+Make a POST call to `https://api.oauth.bunq.com/v1/token` . Pass the following parameters as GET variables:
 
 * `grant_type` - the grant type used, use `authorization_code` for now **\(required\)**
 * `code` - the authorization _Code_ you received after the authorization request was accepted **\(required\)**
 * `redirect_uri` - the same redirect URL you used with the authorization request **\(required\)**
 * `client_id` - your _Client ID_ **\(required\)**
 * `client_secret` - your _Client Secret_ **\(required\)**
+
+{% hint style="info" %}
+Use`https://api-oauth.sandbox.bunq.com/v1/token`in the sandbox environment.
+{% endhint %}
 
 **Token request example:**
 
