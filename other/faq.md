@@ -64,3 +64,47 @@ Our SDKs contain examples and tests that will help you register as a service pro
 
 No examples yet, but we're working on it.
 
+## Do we _always_ need an AISP or PISP license to access/use the bunq API? 
+
+No, there are two ways to get access to the API:
+
+1. as a AISP/PISP license holder, by means of a PSD2 certificate; or 
+2. as a bunq customer, by means of an API-key issued via the bunq app. 
+
+## Is there a difference between the bunq Public API and the bunq PSD2 API? 
+
+The bunq Public API and the bunq PSD2 API are essentially the same API, however, there are different ways to access the API and there are differences in accessible endpoints depending on how you access the API. See the above mentioned answer for more information on how you can get access to the API.
+
+As a general rule, when you access the API by means of a PSD2 certificate, you will only have access to the endpoints required for your respective PSD2 role \(PISP and/or AISP\). In other words, as a PISP you will solely have access to the endpoints for initiating a payment and as a AISP you will solely have access to the endpoints for account information. 
+
+When you are considering to use our API, please consider which API endpoints you would like to use, because certain endpoints are only accessible for bunq customers. 
+
+## Do we need a license if we use the bunq API solely for internal use?
+
+No, you can use the bunq API to manage your own accounts without a license. A license is only needed in case you use the API to provide services to one or more third parties. 
+
+## Can we use the bunq API to offer services to third parties?
+
+Yes, but in this case you might need a license and it is your own responsibility to ensure that you comply with any and all license requirements. We strongly advice you to get an expert legal opinion in case you are considering to use our API to offer services to third parties.
+
+## Is it possible to provide services to third parties by means of the bunq API _without_ a license?
+
+Whether or not you need a license depends on the activities you \(intend to\) perform by means of the bunq API. 
+
+According to the Dutch Central Bank a PISP/AISP license is not always required when using a banking API to provide services to third parties \(see: [https://www.toezicht.dnb.nl/en/3/50-237764.jsp](https://www.toezicht.dnb.nl/en/3/50-237764.jsp)\). 
+
+Based on the aforementioned webpage from DNB we believe a license might not be required in case:  
+
+1. you sign-up for a bunq account;
+2. accept the bunq API terms and conditions;
+3. get an API-Key via the bunq app;
+4. use your API-Key to access the bunq API; 
+5. use OAuth to get access to the accounts of one or more third parties; and  
+6. use the OAuth access to provide services to the third parties.
+
+However, we do not guarantee in any way that you do not need a license in case you follow the above mentioned process. Every situation is different and it is your own responsibility to assess whether or not your situation requires you to get a license. 
+
+## What happens in case we perform licensed activities without a license?
+
+Performing activities subject licensing without the respective license\(s\) is illegal and can have very serious consequences. For example, you might be fined by the regulators, and we could decide to block or close your account. 
+
