@@ -107,6 +107,14 @@ The request only contains URL parameters.
 The `access_token` you've received can be used as a normal API key. Use it to [create an authorized session](https://lexy.gitbook.io/bunq/basics/authentication) with the user account. 
 {% endhint %}
 
+{% hint style="warning" %}
+When connecting to a bunq user's account using OAuth, you create a new user that   `access_token` is associated with. This user has an ID. The bunq API expects you to use this ID as the user ID instead of the primary ID of the user that you connected with via OAuth.
+
+When calling `GET /user/{userID},`you will expect to get `UserPerson` or `UserCompany`. Instead,  you will get the `UserApiKey` object, which contains references to both the user that requested access _\(you\)_ and the user that granted access _\(the bunq user account that you connected to\)_. 
+{% endhint %}
+
+![](../.gitbook/assets/userapikey-creation.jpg)
+
 ## Using the Connect button
 
 Ready to connect to bunq users to your application? Do it with a **Connect to bunq** button. Feel free to use our style guide and prebuilt design assets.
