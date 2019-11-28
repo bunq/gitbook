@@ -113,7 +113,7 @@ When connecting to a bunq user's account using OAuth, you create a new user that
 When calling `GET /user/{userID},`you will expect to get `UserPerson` or `UserCompany`. Instead,  you will get the `UserApiKey` object, which contains references to both the user that requested access _\(you\)_ and the user that granted access _\(the bunq user account that you connected to\)_. 
 {% endhint %}
 
-![](../.gitbook/assets/userapikey-creation.jpg)
+![](../.gitbook/assets/userapikey-creation-3.jpg)
 
 ## Using the Connect button
 
