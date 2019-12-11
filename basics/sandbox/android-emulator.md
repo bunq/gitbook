@@ -37,7 +37,7 @@ If you do not own an Android device to run our Sandbox app on, you can do it usi
 
 ### Creating an account or logging in
 
-* You will be asked to verify your phone number when you open the app for the first time. Sandbox does not send actual SMS messages. Enter any valid phone number and use the default verification code `123456`. 
+* You will be asked to verify your phone number when you open the app for the first time. Sandbox does not send actual SMS messages. Enter any valid phone number and use the default verification code `992266`. 
 * Install [Tinker](https://lexy.gitbook.io/bunq/quickstart/tinker).
 * Run `tinker/user-overview` to create a sandbox account.
 * The output of the command will include the login credentials for the sandbox account.
