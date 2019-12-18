@@ -2,15 +2,15 @@
 
 ## Upcoming changes
 
-### December 4, 2019
-
-Due to internal backend changes, all active [device-server](https://doc.bunq.com/#/device-server/Create_DeviceServer) installations created before April 9, 2019, will stop being validated on December 4, 2019. To communicate with the bunq API again, [create a new API context](https://beta.doc.bunq.com/basics/authentication#creating-api-context).
-
 ### January 15, 2020
 
 We are removing the _limit\_card\_debit\_replacement_ field from `/v1/user/{user_id}/limit` and are replacing it with _limit\_card\_replacement_.
 
 ## Released
+
+### December 4, 2019
+
+Due to internal backend changes, all active [device-server](https://doc.bunq.com/#/device-server/Create_DeviceServer) installations created before April 9, 2019, stopped being validated on December 4, 2019. To communicate with the bunq API again, [create a new API context](https://beta.doc.bunq.com/basics/authentication#creating-api-context).
 
 ### October 9, 2019
 
