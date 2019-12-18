@@ -7,6 +7,7 @@
 * [OAuth](basics/oauth.md)
 * [Authentication](basics/authentication/README.md)
   * [Signing](basics/authentication/signing.md)
+  * [Encryption](basics/authentication/encryption.md)
 * [Headers](basics/headers.md)
 * [Errors](basics/errors.md)
 * [API Conventions](basics/api-conventions.md)
