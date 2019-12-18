@@ -1,5 +1,9 @@
 # Signing
 
+{% hint style="info" %}
+You can [save time on setting up request signing in sandbox](https://beta.doc.bunq.com/basics/sandbox#sandbox-request-signing) to simplify the testing.
+{% endhint %}
+
 We are legally required to protect our users and their data from malicious attacks and intrusions. That is why we beyond having a secure https connection, we use [asymmetric cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) for signing requests and encryption. The use of signatures ensures the data is coming from the trusted party and was not modified after sending and before receiving.
 
 The signing mechanism is implemented in our [SDKs](https://github.com/bunq) so if you are using them you don't have to worry about details described below.
