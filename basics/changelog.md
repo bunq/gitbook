@@ -14,8 +14,9 @@ It’s now possible to retrieve the tree planting progress of the user via the [
 
 ### December 11, 2019
 
-1. We have added an option to [disable request signature validation in sandbox](https://beta.doc.bunq.com/basics/sandbox#sandbox-request-signing).
-2. It’s now possible to order Green and Travel cards via the [`/user/{userID}/card-credit`](https://doc.bunq.com/#/card-credit/Create_CardCredit_for_User) endpoint.
+1. It’s now possible to order Green and Travel cards via the [`/user/{userID}/card-credit`](https://doc.bunq.com/#/card-credit/Create_CardCredit_for_User) endpoint.
+2. We have added an option to [disable request signature validation in sandbox](https://beta.doc.bunq.com/basics/sandbox#sandbox-request-signing).
+3. We have changed the default SMS verification code for the [sandbox app](https://beta.doc.bunq.com/basics/sandbox/android-emulator) from 123456 to 992266.
 
 ### December 4, 2019
 
