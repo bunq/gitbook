@@ -21,10 +21,10 @@ Once you have your API key, create more sandbox users to use as test customer ac
 
 Though request signing is a must on production, you can choose to disable it on sandbox to simplify the testing. Here's how it works:
 
-1. Add a the `X-Bunq-Client-Signature-Validation-Policy` header set to `IGNORE_ONLY_FOR_TESTING` to the request.
+1. Set the `X-Bunq-Client-Signature-Validation-Policy` header to `IGNORE_ONLY_FOR_TESTING` to the request.
 2. Send the request.
 
-When ready to try your integration on production, enable and implement signing in sandbox first. Make sure it works and then change the base URL to `https://api.bunq.com`.
+When ready to try your integration on production, remove the `IGNORE_ONLY_FOR_TESTING` header setting and implement signing in sandbox first. Make sure it works and then change the base URL to `https://api.bunq.com`.
 
 ## Sandbox money
 
