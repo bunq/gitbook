@@ -36,6 +36,10 @@ Your web or mobile app must redirect users `https://oauth.bunq.com/auth` using t
 * `redirect_uri` - the URL you wish the user to be redirected to after the authorization is complete **\(required\)**;
 * `state` - a unique string to be passed back upon completion **\(optional\).**
 
+{% hint style="warning" %}
+Use`https://oauth.sandbox.bunq.com/auth`in the sandbox environment.
+{% endhint %}
+
 #### **Authorization request example:**
 
 ```text
@@ -64,7 +68,7 @@ Make a POST call to `https://api.oauth.bunq.com/v1/token` . Pass the following p
 * `client_id` - your _Client ID_ **\(required\)**
 * `client_secret` - your _Client Secret_ **\(required\)**
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Use`https://api-oauth.sandbox.bunq.com/v1/token`in the sandbox environment.
 {% endhint %}
 
