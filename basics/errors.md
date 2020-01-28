@@ -18,6 +18,7 @@ We use the HTTP response codes to indicate the success or failure of an API requ
 | 404 | NOT FOUND | The object you're looking for cannot be found. |
 | 405 | METHOD NOT ALLOWED | The method you are using is not allowed for this endpoint. |
 | 429 | RATE LIMIT | Too many API calls have been made in a too short period of time. |
+| 466 | REQUEST SIGNATURE REQUIRED | Request signature is required for this operation. |
 | 490 | USER ERROR | A parameter is missing or invalid. |
 | 491 | MAINTENANCE ERROR | bunq is in maintenance mode. |
 | 500 | INTERNAL SERVER ERROR | Something went wrong on our end. |

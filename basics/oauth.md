@@ -8,12 +8,14 @@
 
 The permissions OAuth allows are the following:
 
-* read _Monetary Accounts;_
+* read and create _Monetary Accounts;_
 * read _Payments_ & _Transactions;_
-* create _Payments_, however you can only transfer money between _Monetary Accounts_ of the same user;
-* create _Draft-Payments;_
+* create _Payments_ between _Monetary Accounts_ of the same user;
+* create _Draft-Payments_ \(the user will need to approve the payment using the bunq app\)_;_
 * assign a Monetary account to a _Card;_
-* read _Request-Inquiries_ and _Request-Responses_.
+* read, create and manage _Cards_;
+* read and create _Request-Inquiries_
+* read _Request-Responses_.
 
 ## Get started with OAuth
 

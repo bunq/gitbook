@@ -1,16 +1,50 @@
 # Changelog
 
+{% hint style="success" %}
+Stay up-to-date with the bunq API updates! [Subscribe to our API newsletter](https://bunq.us8.list-manage.com/subscribe?u=c00d0d6daea4e1cf7c863d52e&id=b08680cdc7)!
+{% endhint %}
+
 ## Upcoming changes
 
-### December 24, 2019
+### April 28, 2020
 
-Due to internal backend changes, all active [device-server](https://doc.bunq.com/#/device-server/Create_DeviceServer) installations created before April 9, 2019, will stop being validated on December 24, 2019. To communicate with the bunq API again, [create a new API context](https://beta.doc.bunq.com/basics/authentication#creating-api-context).
+{% hint style="warning" %}
+1. Requests with full request signatures will stop being validated on April 28, 2020. Please switch to [signing the body solely](https://beta.doc.bunq.com/basics/authentication/signing) by that date.
+2. We are switching to [only signing the response body](https://beta.doc.bunq.com/basics/authentication/signing#response-verifying-example) on April 28, 2020. 
+{% endhint %}
+
+### April 8, 2020
+
+Due to internal backend changes, all active [device-server](https://doc.bunq.com/#/device-server/Create_DeviceServer) installations created before April 9, 2019, will stop being validated on January 15, 2019. To communicate with the bunq API again, [create a new API context](https://beta.doc.bunq.com/basics/authentication#creating-api-context).
+
+## Released
+
+### January 28, 2020 \(bunq Update 13 edition\)
+
+#### Changes
+
+1. Request signing has become mandatory only for creating a session and creating a payment. The use of signing for other API requests is optional. 
+2. We have introduced [request body signing](https://beta.doc.bunq.com/basics/authentication/signing). URL and headers do not need to be signed. Body signing will completely replace entire request signing on April 28, 2020.
+3. The following headers are now optional:
+   1. `X-Bunq-Geolocation`;
+   2. `X-Bunq-Language` \(`en_US` is the default language setting for responses and error descriptions\);
+   3. `X-Bunq-Region` \(`en_US` is the default region for currency formatting\);
+   4. `X-Bunq-Request-Id`.
+4. We have extended the [OAuth scopes ](https://beta.doc.bunq.com/basics/oauth#what-can-my-apps-do-with-oauth)with the following permissions:
+   1. create payment requests using the request-inquiry API resource;
+   2. create monetary accounts \(bank, savings, and joint ones\);
+   3. order cards;
+   4. manage cards.
+
+#### Deprecations
+
+1. We have deprecated the signing of the entire API request \(the URL, headers and body\). Requests with full request signatures will stop being validated on April 28, 2020. Please switch to [signing the body solely](https://beta.doc.bunq.com/basics/authentication/signing) by that date.
+2. We are switching to [only signing the response body](https://beta.doc.bunq.com/basics/authentication/signing#response-verifying-example) on April 28, 2020. 
+3. We have deprecated additional encryption.
 
 ### January 15, 2020
 
-We are removing the _limit\_card\_debit\_replacement_ field from `/v1/user/{user_id}/limit` and are replacing it with _limit\_card\_replacement_.
-
-## Released
+We removed the _limit\_card\_debit\_replacement_ field from `/v1/user/{user_id}/limit` and replaced it with _limit\_card\_replacement_.
 
 ### December 17, 2019
 
