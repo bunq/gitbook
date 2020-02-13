@@ -34,10 +34,6 @@ Open an in-app browser.
 
 Use [our SDKs](https://github.com/bunq). They will handle signing for you.
 
-## I don't have a bunq account but I have a Travel / Green Card. How do I access my account via API?
-
-You need to have a bunq bank account to use the bunq API. 
-
 ## Do you have any examples of how to register a PSD2 certificate correctly?
 
 Our SDKs contain examples and tests that will help you register as a service provider.
