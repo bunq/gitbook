@@ -60,8 +60,8 @@ Here is the data you need to sign:
             headers starting with <code>X-Bunq-</code>. The headers should be separated
             from each other with a <code>\n</code> (linefeed) newline. For a full list
             of required call headers, see the headers page.</li>
+          <li>a \n (linefeed) newline separator</li>
           <li>the response body</li>
-          <li>a <code>\n</code> (linefeed) newline separator</li>
         </ul>
       </td>
     </tr>
