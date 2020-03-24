@@ -15,7 +15,7 @@ Stay up-to-date with the bunq API updates! [Subscribe to our API newsletter](htt
 
 ### April 8, 2020
 
-Due to internal backend changes, all active [device-server](https://doc.bunq.com/#/device-server/Create_DeviceServer) installations created before April 9, 2019, will stop being validated on January 15, 2019. To communicate with the bunq API again, [create a new API context](https://beta.doc.bunq.com/basics/authentication#creating-api-context).
+Due to internal backend changes, all active [device-server](https://doc.bunq.com/#/device-server/Create_DeviceServer) installations created before April 9, 2019, will stop being validated on April 8, 2020 \(previously announced date: January 15, 2019\). To communicate with the bunq API again, [create a new API context](https://beta.doc.bunq.com/basics/authentication#creating-api-context).
 
 ## Released
 
