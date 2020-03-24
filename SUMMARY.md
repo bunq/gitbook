@@ -26,6 +26,7 @@
 * [Opening a Session](quickstart/opening-a-session.md)
 * [Payment request](quickstart/payment-request.md)
 * [Tab payment](quickstart/tab-payment.md)
+* [TransferWise payment](quickstart/transferwise-payment.md)
 
 ## PSD2
 
