@@ -6,6 +6,20 @@ Stay up-to-date with the bunq API updates! [Subscribe to our API newsletter](htt
 
 ## Upcoming changes
 
+### June 10, 2020
+
+1. We are removing [/sandbox-user](https://doc.bunq.com/#/sandbox-user/Create_SandboxUser) on June 10, 2020. You can use the following endpoints instead:
+   * `/sandbox-user-company`
+   * `/sandbox-user-person`
+2. We are removing the following `ShareDraftInquiry` endpoints on June 10, 2020:
+   * `/user/{userID}/draft-share-invite-bank/`
+   * `/user/{userID}/draft-share-invite-bank/{itemId}`
+   * `/user/{userID}/draft-share-invite-bank/{draft-share-invite-bankID}/qr-code-content`
+
+{% hint style="warning" %}
+If your application is using Connect as an authentication method, please switch to OAuth by June 10, 2020.
+{% endhint %}
+
 ### April 28, 2020
 
 {% hint style="warning" %}
@@ -18,6 +32,31 @@ Stay up-to-date with the bunq API updates! [Subscribe to our API newsletter](htt
 Due to internal backend changes, all active [device-server](https://doc.bunq.com/#/device-server/Create_DeviceServer) installations created before April 9, 2019, will stop being validated on April 8, 2020 \(previously announced date: January 15, 2019\). To communicate with the bunq API again, [create a new API context](https://beta.doc.bunq.com/basics/authentication#creating-api-context).
 
 ## Released
+
+### March 25, 2020
+
+1. We have deprecated the `ShareDraftInquiry` object. The following endpoints will be removed on June 10, 2020:
+   * `/user/{userID}/draft-share-invite-bank/`
+   * `/user/{userID}/draft-share-invite-bank/{itemId}`
+   * `/user/{userID}/draft-share-invite-bank/{draft-share-invite-bankID}/qr-code-content`
+2. We have deprecated the [/sandbox-user](https://doc.bunq.com/#/sandbox-user/Create_SandboxUser) endpoint and will remove it on June 10, 2020. You can use the following endpoints instead:
+   * `/sandbox-user-company`
+   * `/sandbox-user-person`
+3. We have added the following endpoints for creating international payments in [39 currencies](https://together.bunq.com/d/5185-transferwise-currencies/2):
+   * `/user/{userID}/transferwise-currency`
+   * `/user/{userID}/transferwise-quote-temporary`
+   * `/user/{userID}/transferwise-quote-temporary/{transferwise-quote-temporaryID}`
+   * `/user/{userID}/transferwise-user`
+   * `/user/{userID}/transferwise-quote`
+   * `/user/{userID}/transferwise-quote/(transferwise-quoteID)`
+   * `/user/{userID}/transferwise-quote/{transferwise-quoteID}/transferwise-recipient`
+   * `/user/{userID}/transferwise-quote/{transferwise-quoteID}/transferwise-recipient-requirement`
+   * `/user/{userID}/transferwise-quote/{transferwise-quoteID}/transferwise-transfer-requirement`
+   * `/user/{userID}/monetary-account/{monetary-accountID}/transferwise-quote/{transferwise-quoteID}/transferwise-transfer`
+
+{% hint style="info" %}
+[Follow this sequence of steps](https://beta.doc.bunq.com/quickstart/transferwise-payment) to make your first non-euro payment.
+{% endhint %}
 
 ### January 28, 2020 \(bunq Update 13 edition\)
 

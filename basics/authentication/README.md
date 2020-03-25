@@ -20,9 +20,9 @@ The parties _\(you and bunq\)_ exchange their public keys in the first step of t
 
 Before you can start calling the bunq API, you must do the following:
 
-* register your API key and IP address\(es\);
-* register your device;
-* create a session. 
+* register your API key and IP address\(es\) via `POST /installation`;
+* register your device via `POST /device-server`;
+* create a session via `POST /session-server`. 
 
 We call this intro "creating an API context". There are a couple of ways to carry out the sequence of steps. Let's dwell on each of them.
 
