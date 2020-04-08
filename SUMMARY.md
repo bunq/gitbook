@@ -27,6 +27,7 @@
 * [Payment request](quickstart/payment-request.md)
 * [Tab payment](quickstart/tab-payment.md)
 * [TransferWise payment](quickstart/transferwise-payment.md)
+* [Quickstart: Downloading attachments](quickstart/quickstart-downloading-attachments.md)
 
 ## PSD2
 
