@@ -1,7 +1,7 @@
 # OAuth
 
 {% hint style="info" %}
-[OAuth 2.0](https://www.oauth.com/oauth2-servers/getting-ready/) is a protocol that will let your app connect to bunq users in a safe and easy way. Please be aware that if you will gain access to account information of other bunq users or initiate a payment for them, you require a PSD2 permit.
+[OAuth 2.0](https://www.oauth.com/oauth2-servers/getting-ready/) is a protocol that will let your app connect to bunq users in a safe and easy way. Please be aware that if you will gain access to account information of other bunq users or initiate a payment for them, [you may require a PSD2 permit](https://beta.doc.bunq.com/other/faq#can-we-use-the-bunq-api-to-offer-services-to-third-parties).
 {% endhint %}
 
 ## What can my apps do with OAuth?
