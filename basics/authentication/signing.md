@@ -1,7 +1,7 @@
 # Signing
 
 {% hint style="warning" %}
-We have deprecated the signing of the entire API request \(the URL, headers and body\). You now only need to sign the request body. Please switch to signing the body solely by April 28, 2020. Requests with full request signatures will stop being validated on that date.
+We deprecated the signing of the entire API request \(the URL, headers and body\). You now only need to sign the request body. Please switch to signing the body solely by April 28, 2020. Requests with full request signatures will stop being validated on that date.
 {% endhint %}
 
 {% hint style="info" %}
@@ -54,14 +54,7 @@ Here is the data you need to sign:
       <td style="text-align:left">
         <p></p>
         <ul>
-          <li>the response code</li>
-          <li>headers, sorted alphabetically by key, with key and value separated by <code>:</code> (a
-            colon followed by a space) and only including <code>Cache-Control</code>, <code>User-Agent</code> and
-            headers starting with <code>X-Bunq-</code>. The headers should be separated
-            from each other with a <code>\n</code> (linefeed) newline. For a full list
-            of required call headers, see the headers page.</li>
-          <li>a \n (linefeed) newline separator</li>
-          <li>the response body</li>
+          <li>body</li>
         </ul>
       </td>
     </tr>
@@ -92,13 +85,7 @@ user-agent: bunq-TestServer/1.00 sandbox/0.17b3
 
 Let's sign the request. 
 
-* [ ] Create a `$dataToSign` variable with the body of the request.
-* [ ] ~~On a new line follow that by a list of alphabetically-sorted headers only including `Cache-Control`, `User-Agent` and the headers starting with `X-Bunq-`. Convert to~~ 
-
-  ~~`X-Header-Capitalization-Style` from  `x-header-non-capitalization-style` if needed.~~
-
-* [ ] ~~Add an extra \(so double\) linefeed after the list of headers.~~ 
-* [ ] ~~End with the body of the request.~~
+* [ ] Create a `$dataToSign` variable containing the body of the request.
 
 So for our example above the request to sign will look like this:
 
@@ -126,8 +113,7 @@ openssl_sign($dataToSign, $signature, $privateKey, OPENSSL_ALGO_SHA256);
 
 Encode the resulting `$signature` using Base64 and add the resulting value under the `X-Bunq-Client-Signature` header.  It will look something like this: `UINaaJELGHekiye4JExGx6TCs2lKMta74oVlZlwVNuVD6xPpH7RS6H58C21MmiQ75`
 
-You have signed your request! Send it!  
-
+You have signed your request! Send it!
 
 ## Response verifying example
 
@@ -162,25 +148,15 @@ The response will only contain `X-Bunq-Client-Request-Id` if you pass it with yo
 
 We need to verify that this response was sent by the bunq server and not from a man-in-the-middle. 
 
-* [ ] Create a `$dataToSign` variable starting with the response code \(`200`\). 
-* [ ] On a new line follow that by a list of alphabetically-sorted headers only including headers starting with `X-Bunq-`. Convert to 
-
-  `X-Header-Capitalization-Style` from  `x-header-non-capitalization-style` if needed.
-
-* [ ] Add an extra \(so double\) linefeed after the list of headers. 
-* [ ] End with the body of the request.
+* [ ] Create a `$dataToSign` variable containing the body of the request.
 
 {% hint style="warning" %}
-We are deprecating full response signature and will start only signing the response body on April 28, 2020. 
+We started to only sign the response body on April 28, 2020. 
 {% endhint %}
 
 So for our example above the response to sign will look like this:
 
 ```text
-200
-X-Bunq-Client-Request-Id: 57061b04b67ef
-X-Bunq-Server-Response-Id: 89dcaa5c-fa55-4068-9822-3f87985d2268
-
 {
     "Response": [
         {
@@ -205,13 +181,7 @@ openssl_sign($dataToVerify, $signature, $publicKey, OPENSSL_ALGO_SHA256);
 If you get this error `The request signature is invalid`, please check the following:
 
 * [ ] There are no redundant characters _\(extra spaces, trailing line breaks, etc.\)_ in the data to sign.
-* [ ] In your data to sign, you have used only the endpoint URL \(`POST /v1/user`\) instead of the full URL \(`POST https://sandbox.public.api.bunq.com/v1/user`\).
-* [ ] You only added the `Cache-Control`, `User-Agent` and `X-Bunq-` headers.
-* [ ] You have sorted the headers alphabetically by key in the ascending order.
-* [ ] There is a colon followed by a space `:`. It separates the header key and value in your data to sign.
-* [ ] There is an extra line break after the list of headers in the data to sign, regardless of whether there is a request body.
-* [ ] Make sure the body is appended to the data to sign exactly as you are adding it to the request.
-* [ ] You have not added the `X-Bunq-Client-Signature` header to the list of headers.
+* [ ] The body is appended to the data to sign exactly as you are adding it to the request.
 * [ ] You have added the full body to the data to sign.
 * [ ] You are using the data to sign to create a SHA256 hash signature.
 * [ ] You have Base64 encoded the SHA256 hash signature before adding it to the request under the `X-Bunq-Client-Signature` header.
