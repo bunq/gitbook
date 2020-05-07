@@ -4,10 +4,6 @@
 We deprecated the signing of the entire API request \(the URL, headers and body\). You now only need to sign the request body. Please switch to signing the body solely by April 28, 2020. Requests with full request signatures will stop being validated on that date.
 {% endhint %}
 
-{% hint style="info" %}
-You can [save time on setting up request signing in sandbox](https://beta.doc.bunq.com/basics/sandbox#sandbox-request-signing) to simplify the testing.
-{% endhint %}
-
 We are legally required to protect our users and their data from malicious attacks and intrusions. That is why we beyond having a secure https connection, we use [asymmetric cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) for signing requests that create a session or payment. The use of signatures ensures the data is coming from the trusted party and was not modified after sending and before receiving.
 
 Request body signing is only mandatory for the following operations: 
