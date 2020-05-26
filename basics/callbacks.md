@@ -51,6 +51,7 @@ Example request body:
 | IDEAL | notifications for iDEAL-deposits towards a bunq account |
 | SOFORT | notifications for SOFORT-deposits towards a bunq account |
 | MUTATION | notifications for any action that affects a monetary account’s balance |
+| OAUTH | notifications for revoked OAuth connections |
 | PAYMENT | notifications for payments created from, or received on a bunq account \(doesn’t include payments that result out of paying a Request, iDEAL, Sofort or Invoice\). Outgoing payments have a negative value while incoming payments have a positive value |
 | REQUEST | notifications for incoming requests and updates on outgoing requests |
 | SCHEDULE\_RESULT | notifications for when a scheduled payment is executed |

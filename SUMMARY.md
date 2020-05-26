@@ -38,8 +38,8 @@
 ## Other
 
 * [Status Page](https://status.bunq.com/)
-* [Developer blog](https://medium.com/bunq/tagged/developer)
-* [Subscribe to our API updates](http://eepurl.com/gs1IrX)
+* [Developer blog](https://medium.com/bunq-developers-corner)
+* [Subscribe to API updates](http://eepurl.com/gs1IrX)
 * [How should you get started with the bunq API?](https://bunqsurvey.typeform.com/to/B6RSG4)
 * [FAQ](other/faq.md)
 * [Swagger file](https://raw.githubusercontent.com/bunq/doc/master/swagger.json)
