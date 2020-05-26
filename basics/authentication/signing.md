@@ -1,7 +1,7 @@
 # Signing
 
 {% hint style="warning" %}
-We deprecated the signing of the entire API request \(the URL, headers and body\). You now only need to sign the request body. Please switch to signing the body solely by April 28, 2020. Requests with full request signatures will stop being validated on that date.
+We deprecated the signing of the entire API request \(the URL, headers and body\). You only need to sign the request body. Requests with full request signatures are no longer validated.
 {% endhint %}
 
 We are legally required to protect our users and their data from malicious attacks and intrusions. That is why we beyond having a secure https connection, we use [asymmetric cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) for signing requests that create a session or payment. The use of signatures ensures the data is coming from the trusted party and was not modified after sending and before receiving.
@@ -147,7 +147,7 @@ We need to verify that this response was sent by the bunq server and not from a 
 * [ ] Create a `$dataToSign` variable containing the body of the request.
 
 {% hint style="warning" %}
-We started to only sign the response body on April 28, 2020. 
+We started to only sign the response body on April 28, 2020. Please make sure you validate our new response signature.
 {% endhint %}
 
 So for our example above the response to sign will look like this:

@@ -6,6 +6,10 @@ Stay up-to-date with the bunq API updates! [Subscribe to our API newsletter](htt
 
 ## Upcoming changes
 
+### Near future
+
+Due to internal backend changes, all active [device-server](https://doc.bunq.com/#/device-server/Create_DeviceServer) installations created before April 9, 2019, will stop being validated \(previously announced dates: January 15, 2020; April 8, 2020\). To communicate with the bunq API again, [create a new API context](https://beta.doc.bunq.com/basics/authentication#creating-api-context).
+
 ### June 10, 2020
 
 1. We are removing [/sandbox-user](https://doc.bunq.com/#/sandbox-user/Create_SandboxUser) on June 10, 2020. You can use the following endpoints instead:
@@ -20,22 +24,27 @@ Stay up-to-date with the bunq API updates! [Subscribe to our API newsletter](htt
 If your application is using Connect as an authentication method, please switch to OAuth by June 10, 2020.
 {% endhint %}
 
-### April 28, 2020
+## Released
+
+### May 27, 2020
+
+Requests with full request signatures stopped being validated on May 27, 2020 \(previously announced date: April 28, 2019\). 
 
 {% hint style="warning" %}
-1. Requests with full request signatures will stop being validated on April 28, 2020. Please switch to [signing the body solely](https://beta.doc.bunq.com/basics/authentication/signing) by that date.
-2. We are switching to [only signing the response body](https://beta.doc.bunq.com/basics/authentication/signing#response-verifying-example) on April 28, 2020. 
+If you are still signing ****full requests, please switch to [signing the body solely](https://beta.doc.bunq.com/basics/authentication/signing).
 {% endhint %}
 
-### April 8, 2020
+### April 28, 2020
 
-Due to internal backend changes, all active [device-server](https://doc.bunq.com/#/device-server/Create_DeviceServer) installations created before April 9, 2019, will stop being validated on April 8, 2020 \(previously announced date: January 15, 2019\). To communicate with the bunq API again, [create a new API context](https://beta.doc.bunq.com/basics/authentication#creating-api-context).
+We switched to [only signing the response body](https://beta.doc.bunq.com/basics/authentication/signing#response-verifying-example). 
 
-## Released
+### April 24, 2020
+
+We introduced an OAUTH callback category. Use it to receive notifications on revoked OAuth connections.
 
 ### March 25, 2020
 
-1. We have deprecated the `ShareDraftInquiry` object. The following endpoints will be removed on June 10, 2020:
+1. We deprecated the `ShareDraftInquiry` object. The following endpoints will be removed on June 10, 2020:
    * `/user/{userID}/draft-share-invite-bank/`
    * `/user/{userID}/draft-share-invite-bank/{itemId}`
    * `/user/{userID}/draft-share-invite-bank/{draft-share-invite-bankID}/qr-code-content`
@@ -62,14 +71,14 @@ Due to internal backend changes, all active [device-server](https://doc.bunq.com
 
 #### Changes
 
-1. Request signing has become mandatory only for creating a session and creating a payment. The use of signing for other API requests is optional. 
-2. We have introduced [request body signing](https://beta.doc.bunq.com/basics/authentication/signing). URL and headers do not need to be signed. Body signing will completely replace entire request signing on April 28, 2020.
+1. Request signing became mandatory only for creating a session and creating a payment. The use of signing for other API requests is optional. 
+2. We introduced [request body signing](https://beta.doc.bunq.com/basics/authentication/signing). URL and headers do not need to be signed. Body signing completely replaced entire request signing on May 27, 2020 \(previously announced date: April 28, 2019\).
 3. The following headers are now optional:
    1. `X-Bunq-Geolocation`;
    2. `X-Bunq-Language` \(`en_US` is the default language setting for responses and error descriptions\);
    3. `X-Bunq-Region` \(`en_US` is the default region for currency formatting\);
    4. `X-Bunq-Request-Id`.
-4. We have extended the [OAuth scopes ](https://beta.doc.bunq.com/basics/oauth#what-can-my-apps-do-with-oauth)with the following permissions:
+4. We extended the [OAuth scopes ](https://beta.doc.bunq.com/basics/oauth#what-can-my-apps-do-with-oauth)with the following permissions:
    1. create payment requests using the request-inquiry API resource;
    2. create monetary accounts \(bank, savings, and joint ones\);
    3. order cards;

@@ -7,7 +7,7 @@ If you do not own an Android device to run our Sandbox app on, you can do it usi
 * [ ] [bunq Sandbox App APK](https://appstore.bunq.com/api/android/builds/bunq-android-sandbox-master.apk)
 * [ ] [Android Studio](https://developer.android.com/studio/index.html)
 
-#### Starting the Android Virtual Device \(AVD\) Manager
+### Starting the Android Virtual Device \(AVD\) Manager
 
 1. Open **Android Studio**.
 2. Find and select _Tools → Android → AVD Manager_ on the top menu.
@@ -35,12 +35,19 @@ If you do not own an Android device to run our Sandbox app on, you can do it usi
 3. Make sure that the virtual device is started and has fully booted.
 4. Run `./adb install ~/Downloads/bunq-android-sandboxEmulator-public-api.apk`. and wait for the success message.
 
-### Creating an account or logging in
+### Creating an account and/or logging in
 
-* You will be asked to verify your phone number when you open the app for the first time. Sandbox does not send actual SMS messages. Enter any valid phone number and use the default verification code `992266`. 
-* Install [Tinker](https://lexy.gitbook.io/bunq/quickstart/tinker).
-* Run `tinker/user-overview` to create a sandbox account.
-* The output of the command will include the login credentials for the sandbox account.
+1. Create a sandbox account in the [developer portal](https://developer.bunq.com/).
+2. Log in to the sandbox app using the sandbox user credentials.
+
+{% hint style="info" %}
+You will be asked to verify your phone number when you open the app for the first time. Sandbox does not send actual SMS messages. Enter any valid phone number and use the default verification code `992266`. 
+{% endhint %}
+
+If you couldn't generate a sandbox account in the developer portal, use Tinker:
+
+1. Install [Tinker](https://beta.doc.bunq.com/quickstart/tinker).
+2. Run `tinker/user-overview` to create a sandbox account. The output of the command will include the login credentials for the sandbox account.
 
 {% hint style="warning" %}
 It is **NOT** possible to create sandbox accounts using the sandbox app. bunq does not review Sandbox account applications.
