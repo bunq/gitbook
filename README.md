@@ -6,7 +6,7 @@ The bunq API is based on the RESTful principles. It returns responses in the JSO
 
 ## Getting Started
 
-1. **Create a user account with your phone.** Afterwards, you can use this account to create an API key from which you can make API calls. You can find API key management under _Profile → Security & Settings → Developers → API keys_.
+1. **Create a user account with your phone.** Afterwards, you can use this account to create an API key from which you can make API calls. You can create an API key either in our [developer portal ](https://developer.bunq.com)or in the bunq app \(_Profile → Security & Settings → Developers → API keys\)_.
 2. **Register a device.** A device can be a phone \(private\), computer or a server \(public\). You can register a new device by using the _installation_ and _device-server_ calls.
 3. **Open a session.** Sessions are temporary and expire in the same amount of time you have set for auto logout in your user account.
 4. **Make your first call!**

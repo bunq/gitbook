@@ -4,7 +4,17 @@ So, you want to start using the bunq API, awesome! To do this, you have to open 
 
 ## Getting an API key
 
-The only way to **get a production API key** is to generate it from within the bunq app \(_Profile → Security & Settings → Developers → API keys\)_. As for sandbox API keys, there are [4 ways you can create them](https://beta.doc.bunq.com/basics/sandbox#sandbox-api-keys).
+There 2 ways to **get a production API key:**
+
+1. create an app in the [developer portal](http://developer.bunq.com/), or
+2. generate it in the bunq app _\(Profile → Security & Settings → Developers → API keys\)_.
+
+**For sandbox** You can use one of the following ways:
+
+* create a sandbox user in the [developer portal](http://developer.bunq.com/);
+* generate an API key in the [sandbox app](https://github.com/bunq/doc/blob/develop/DESCRIPTION.md#android-emulator) _\(Profile → Security & Settings → Developers → API keys\)_;
+* get an API key from [Tinker](https://beta.doc.bunq.com/quickstart/tinker);
+* run a cURL request \(use `sandbox-user-company` to generate a business user\):  `curl https://public-api.sandbox.bunq.com/v1/sandbox-user-person -X POST --header "Content-Type: application/json" --header "Cache-Control: none" --header "User-Agent: curl-request" --header "X-Bunq-Client-Request-Id: $(date)randomId" --header "X-Bunq-Language: nl_NL" --header "X-Bunq-Region: nl_NL" --header "X-Bunq-Geolocation: 0 0 0 0 000"` 
 
 {% hint style="info" %}
 * Production API keys are only usable on the production and sandbox API keys are only usable on the sandbox. 
