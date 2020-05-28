@@ -28,7 +28,7 @@ If your application is using Connect as an authentication method, please switch 
 
 ### May 27, 2020
 
-Requests with full request signatures stopped being validated on May 27, 2020 \(previously announced date: April 28, 2019\). 
+Requests with full request signatures stopped being validated on May 27, 2020 \(previously announced date: April 28, 2020\). 
 
 {% hint style="warning" %}
 If you are still signing ****full requests, please switch to [signing the body solely](https://beta.doc.bunq.com/basics/authentication/signing).
@@ -72,7 +72,7 @@ We introduced an OAUTH callback category. Use it to receive notifications on rev
 #### Changes
 
 1. Request signing became mandatory only for creating a session and creating a payment. The use of signing for other API requests is optional. 
-2. We introduced [request body signing](https://beta.doc.bunq.com/basics/authentication/signing). URL and headers do not need to be signed. Body signing completely replaced entire request signing on May 27, 2020 \(previously announced date: April 28, 2019\).
+2. We introduced [request body signing](https://beta.doc.bunq.com/basics/authentication/signing). URL and headers do not need to be signed. Body signing completely replaced entire request signing on May 27, 2020 \(previously announced date: April 28, 2020\).
 3. The following headers are now optional:
    1. `X-Bunq-Geolocation`;
    2. `X-Bunq-Language` \(`en_US` is the default language setting for responses and error descriptions\);
