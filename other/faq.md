@@ -66,7 +66,7 @@ Our SDKs contain examples and tests that will help you register as a service pro
 
 ### **Python examples** 
 
-No examples yet, but we're working on it.
+{% embed url="https://github.com/bunq/sdk\_python/blob/develop/tests/context/test\_psd2\_context.py" %}
 
 ## Do we _always_ need an AISP or PISP license to access/use the bunq API? 
 
