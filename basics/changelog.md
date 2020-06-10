@@ -10,19 +10,24 @@ Stay up-to-date with the bunq API updates! [Subscribe to our API newsletter](htt
 
 Due to internal backend changes, all active [device-server](https://doc.bunq.com/#/device-server/Create_DeviceServer) installations created before April 9, 2019, will stop being validated \(previously announced dates: January 15, 2020; April 8, 2020\). To communicate with the bunq API again, [create a new API context](https://beta.doc.bunq.com/basics/authentication#creating-api-context).
 
-### June 10, 2020
+### August 26, 2020
 
-1. We are removing [/sandbox-user](https://doc.bunq.com/#/sandbox-user/Create_SandboxUser) on June 10, 2020. You can use the following endpoints instead:
-   * `/sandbox-user-company`
-   * `/sandbox-user-person`
-2. We are removing the following `ShareDraftInquiry` endpoints on June 10, 2020:
-   * `/user/{userID}/draft-share-invite-bank/`
-   * `/user/{userID}/draft-share-invite-bank/{itemId}`
-   * `/user/{userID}/draft-share-invite-bank/{draft-share-invite-bankID}/qr-code-content`
+We are removing the following `ShareDraftInquiry` endpoints on August 26, 2020 \(previously announced date: June 10, 2020\):
+
+* `/user/{userID}/draft-share-invite-bank/`
+* `/user/{userID}/draft-share-invite-bank/{itemId}`
+* `/user/{userID}/draft-share-invite-bank/{draft-share-invite-bankID}/qr-code-content`
 
 {% hint style="warning" %}
-If your application is using Connect as an authentication method, please switch to OAuth by June 10, 2020.
+If your application is using Connect as an authentication method, please switch to OAuth by August 26, 2020, 2020.
 {% endhint %}
+
+### June 10, 2020
+
+We are removing [/sandbox-user](https://doc.bunq.com/#/sandbox-user/Create_SandboxUser) on June 10, 2020. You can use the following endpoints instead:
+
+* `/sandbox-user-company`
+* `/sandbox-user-person`
 
 ## Released
 
@@ -40,7 +45,13 @@ We switched to [only signing the response body](https://beta.doc.bunq.com/basics
 
 ### April 24, 2020
 
-We introduced an OAUTH callback category. Use it to receive notifications on revoked OAuth connections.
+1. We introduced an OAUTH callback category. Use it to receive notifications on revoked OAuth connections.
+2. We added the following resources for Slice group management:
+   * [registry](https://doc.bunq.com/#/registry)
+   * [registry-entry](https://doc.bunq.com/#/registry-entry)
+   * [registry-setting](https://doc.bunq.com/#/registry-setting)
+   * [registry-settlement](https://doc.bunq.com/#/registry-settlement)
+   * [registry-settlement-pending](https://doc.bunq.com/#/registry-settlement-pending)
 
 ### March 25, 2020
 
