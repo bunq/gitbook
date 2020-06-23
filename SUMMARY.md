@@ -4,6 +4,7 @@
 
 ## Basics
 
+* [How bunq works](https://github.com/bunq/doc/blob/develop/README.md)
 * [OAuth](basics/oauth.md)
 * [Authentication](basics/authentication/README.md)
   * [Signing](basics/authentication/signing.md)
