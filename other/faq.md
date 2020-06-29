@@ -38,11 +38,41 @@ Use [our SDKs](https://github.com/bunq). They will handle signing for you.
 
 You need to have a Premium \(SuperGreen\) or Business \(SuperGreen\) account to use the bunq API. 
 
-## Do you have any examples of how to register a PSD2 certificate correctly?
+## PSD2
+
+### What PSD2 certificate types does bunq accept?
+
+We accept QSEAL certificates.
+
+### How do I get an API key as a PSD2 user?
+
+You’ll receive a token in return to passing your QSEAL certificate. You’ll then be able to use it as an API key.
+
+### What do I need to register my QSEAL certificate?
+
+You need to send a `POST /payment-service-provider-credential` request passing your QSEAL certificate, QSEAL certificate chain, and a signature of the device registration key with the QSEAL private key. Check the full authentication flow [here](https://beta.doc.bunq.com/psd2/connect-as-a-psd2-service-provider#register-as-a-service-provider).
+
+### How does the PSD2 API request signing work?
+
+The request signature requirement is the same for all types of API users. You can read more about it [here](https://beta.doc.bunq.com/basics/authentication/signing).
+
+### How do I get an OAuth client as a PSD2 user?
+
+You can create an OAuth Client using `POST /user/userId/oauth-client` and read it using its id \(`GET /user/userId/oauth-client/oauth-clientId`\). Once you have it, you can add a redirect url using `POST /user/{userID}/oauth-client/{oauth-clientID}/callback-url`. From there, you can move to [creating an authorization request and token exchange](https://beta.doc.bunq.com/basics/oauth).
+
+### Where do I find the AISP, PISP and CBPIII API reference?
+
+bunq offers one API to both our users and companies with PSD2 permit. As a PSD2 party, you can only access the endpoints that correspond with your permit level.
+
+### Are the AISP, PISP and CBPIII APIs the same API as I use as a bunq user? 
+
+Yes, the only thing that differs is the authentication flow. Everything else is the same.
+
+### Do you have any examples of how to register a PSD2 certificate correctly?
 
 Our SDKs contain examples and tests that will help you register as a service provider.
 
-### **C\# examples** 
+#### **C\# examples** 
 
 {% embed url="https://github.com/bunq/psd2\_sample\_csharp" %}
 
@@ -50,7 +80,7 @@ Our SDKs contain examples and tests that will help you register as a service pro
 
 {% embed url="https://github.com/bunq/tinker\_csharp/blob/develop/TinkerSrc/CreatePsd2Configuration.cs" %}
 
-### **PHP examples**
+#### **PHP examples**
 
 {% embed url="https://github.com/bunq/sdk\_php/tree/develop/tests/Context/PSD2" %}
 
@@ -58,24 +88,24 @@ Our SDKs contain examples and tests that will help you register as a service pro
 
 {% embed url="https://github.com/bunq/tinker\_php/blob/develop/tinker/create-psd2-configuration.php" %}
 
-### **Java examples**
+#### **Java examples**
 
 {% embed url="https://github.com/bunq/sdk\_java/blob/develop/src/test/java/com/bunq/sdk/context/Psd2ContextTest.java" %}
 
 {% embed url="https://github.com/bunq/tinker\_java/blob/develop/src/main/java/com/bunq/tinker/CreatePsd2Configuration.java" %}
 
-### **Python examples** 
+#### **Python examples** 
 
 {% embed url="https://github.com/bunq/sdk\_python/blob/develop/tests/context/test\_psd2\_context.py" %}
 
-## Do we _always_ need an AISP or PISP license to access/use the bunq API? 
+### Do we _always_ need an AISP or PISP license to access/use the bunq API? 
 
 No, there are two ways to get access to the API:
 
 1. as a AISP/PISP license holder, by means of a PSD2 certificate; or 
 2. as a bunq customer, by means of an API-key issued via the bunq app. 
 
-## Is there a difference between the bunq Public API and the bunq PSD2 API? 
+### Is there a difference between the bunq Public API and the bunq PSD2 API? 
 
 The bunq Public API and the bunq PSD2 API are essentially the same API, however, there are different ways to access the API and there are differences in accessible endpoints depending on how you access the API. See the above mentioned answer for more information on how you can get access to the API.
 
@@ -83,15 +113,15 @@ As a general rule, when you access the API by means of a PSD2 certificate, you w
 
 When you are considering to use our API, please consider which API endpoints you would like to use, because certain endpoints are only accessible for bunq customers. 
 
-## Do we need a license if we use the bunq API solely for internal use?
+### Do we need a license if we use the bunq API solely for internal use?
 
 No, you can use the bunq API to manage your own accounts without a license. A license is only needed in case you use the API to provide services to one or more third parties. 
 
-## Can we use the bunq API to offer services to third parties?
+### Can we use the bunq API to offer services to third parties?
 
 Yes, but in this case you might need a license and it is your own responsibility to ensure that you comply with any and all license requirements. We strongly advice you to get an expert legal opinion in case you are considering to use our API to offer services to third parties.
 
-## Is it possible to provide services to third parties by means of the bunq API _without_ a license?
+### Is it possible to provide services to third parties by means of the bunq API _without_ a license?
 
 Whether or not you need a license depends on the activities you \(intend to\) perform by means of the bunq API. 
 
@@ -108,7 +138,7 @@ Based on the aforementioned webpage from DNB we believe a license might not be r
 
 However, we do not guarantee in any way that you do not need a license in case you follow the above mentioned process. Every situation is different and it is your own responsibility to assess whether or not your situation requires you to get a license. 
 
-## What happens in case we perform licensed activities without a license?
+### What happens in case we perform licensed activities without a license?
 
 Performing activities subject licensing without the respective license\(s\) is illegal and can have very serious consequences. For example, you might be fined by the regulators, and we could decide to block or close your account. 
 
