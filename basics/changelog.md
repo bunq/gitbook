@@ -8,28 +8,44 @@ Stay up-to-date with the bunq API updates! [Subscribe to our API newsletter](htt
 
 ### Near future
 
-Due to internal backend changes, all active [device-server](https://doc.bunq.com/#/device-server/Create_DeviceServer) installations created before April 9, 2019, will stop being validated \(previously announced dates: January 15, 2020; April 8, 2020\). To communicate with the bunq API again, [create a new API context](https://beta.doc.bunq.com/basics/authentication#creating-api-context).
+1. Due to internal backend changes, all active [device-server](https://doc.bunq.com/#/device-server/Create_DeviceServer) installations created before April 9, 2019, will stop being validated \(previously announced dates: January 15, 2020; April 8, 2020\). To communicate with the bunq API again, [create a new API context](https://beta.doc.bunq.com/basics/authentication#creating-api-context).
+2. We are removing [/sandbox-user](https://doc.bunq.com/#/sandbox-user/Create_SandboxUser) on \(previously announced date: June 10, 2020\). You can use the following endpoints instead:
+   * `/sandbox-user-company`
+   * `/sandbox-user-person`
 
-### August 26, 2020
+### November 4, 2020
 
-We are removing the following `ShareDraftInquiry` endpoints on August 26, 2020 \(previously announced date: June 10, 2020\):
-
-* `/user/{userID}/draft-share-invite-bank/`
-* `/user/{userID}/draft-share-invite-bank/{itemId}`
-* `/user/{userID}/draft-share-invite-bank/{draft-share-invite-bankID}/qr-code-content`
+1. The `ShareInviteBankInquiry` object is changing its name to `ShareInviteMonetaryAccountInquiry` on November 4th, 2020. Please plan on changing the _ShareInviteBankResponse_ field to _ShareInviteMonetaryAccountResponse_ in your integration on that date.
+2. We are removing the following `ShareDraftInquiry` endpoints on November 4, 2020 \(previously announced date: August 26, 2020\)
+   * `/user/{userID}/draft-share-invite-bank/`
+   * `/user/{userID}/draft-share-invite-bank/{itemId}`
+   * `/user/{userID}/draft-share-invite-bank/{draft-share-invite-bankID}/qr-code-content`
 
 {% hint style="warning" %}
-If your application is using Connect as an authentication method, please switch to OAuth by August 26, 2020, 2020.
+If your application is using Connect as an authentication method, please switch to OAuth by November 4, 2020.
 {% endhint %}
 
-### June 10, 2020
-
-We are removing [/sandbox-user](https://doc.bunq.com/#/sandbox-user/Create_SandboxUser) on June 10, 2020. You can use the following endpoints instead:
-
-* `/sandbox-user-company`
-* `/sandbox-user-person`
-
 ## Released
+
+### July 1, 2020
+
+1. It is now possible to get a tracking link for the ordered card via the `card_shipment_tracking_url` field.
+2. You can read how much money the card saved the user via the `amount_saved_zero_fx` field.
+3. You can provide a more accurate card tracking experience via the updated list of possible card order statuses:
+
+* `NEW_CARD_REQUEST_RECEIVED`
+* `CARD_REQUEST_PENDING`
+* `SENT_FOR_PRODUCTION`
+* `ACCEPTED_FOR_PRODUCTION`
+* `DELIVERED_TO_CUSTOMER`
+* `CARD_UPDATE_REQUESTED`
+* `CARD_UPDATE_PENDING`
+* `CARD_UPDATE_SENT`
+* `CARD_UPDATE_ACCEPTED` 
+* `VIRTUAL_DELIVERY`
+* `NEW_CARD_REQUEST_PENDING_USER_APPROVAL`
+* `SENT_FOR_DELIVERY`
+* `NEW_CARD_REQUEST_CANCELLED`
 
 ### May 27, 2020
 
