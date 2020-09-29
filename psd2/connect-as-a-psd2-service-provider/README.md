@@ -1,6 +1,6 @@
 # Connect as a PSD2 service provider
 
-As a service provider, either an Account Information Service Provider \(AISP\) or Payment Initiation Service Provider \(PISP\), you have obtained or are planning to obtain a licence from your local supervisor. You will need your unique eIDAS certificate number to start using the PSD2-compliant bunq API on production.
+As a service provider, either an Account Information Service Provider \(AISP\) or Payment Initiation Service Provider \(PISP\), you have obtained or are planning to obtain a license from your local supervisor. You will need your unique eIDAS certificate number to start using the PSD2-compliant bunq API on production.
 
 We accept pseudo certificates in the sandbox environment so you could test the flow. You can generate a test certificate using the command below. 
 
@@ -14,7 +14,7 @@ Make sure to include `AISP` and/or `PISP` in the name to generate a certificate 
 
 ## Register as a service provider
 
-Before you can read information on bunq users or initiate payments, you need to register a PSD2 account and receive credentials that will enable you to access the bunq user accounts.
+Before you can read the information on bunq users or initiate payments, you need to register a PSD2 account and receive credentials that will enable you to access the bunq user accounts.
 
 1. Execute `POST v1/installation` and get your installation _Token_ with a unique random key pair.
 2. Use the installation _Token_ and your unique PSD2 certificate to call `POST v1/payment-service-provider-credential`. This will register your software.
@@ -26,18 +26,20 @@ Before you can read information on bunq users or initiate payments, you need to 
 The first session will last 1 hour. Start a new session within 60 minutes.
 {% endhint %}
 
-![](../../.gitbook/assets/20190313_psd_party_identification.jpg)
+![](../../.gitbook/assets/creating-api-context-as-a-psd2-user-revised-.jpg)
 
-## Register your application
+## Register your OAuth application
 
-Before you can start authenticating on behalf of a bunq user, you need to get _Client ID_ and _Client Secret_, which will identify you in requests to the user accounts.
+Before you can start authenticating on behalf of a bunq user, you need to get a _Client ID_ and a _Secret_, which will identify you in authorization requests to the user accounts.
 
-1. Call `POST /v1/user/{userID}/oauth-client`
-2. Call `GET /v1/user/{userID}/oauth-client/{oauth-clientID}`. We will return your _Client ID_ and _Client Secret_.
-3. Call `POST /v1/user/{userID}/oauth-client/{oauth-clientID}/callback-url`. Include the OAuth callback URL of your application.
-4. You are ready to initiate authorization requests.
+1. Call `POST /v1/user/{userID}/oauth-client` to create an OAuth Client.
+2. Add a redirect URL to the OAuth Client via `POST /user/{userID}/oauth-client/{oauth-clientID}/callback-url`.
+3. Call `GET /v1/user/{userID}/oauth-client/{oauth-clientID}`. We will return your _Client ID_ and _Client Secret_.
+4. You are ready to [initiate authorization requests](https://beta.doc.bunq.com/basics/oauth#authorization-request).
 
-![](../../.gitbook/assets/20190313_oauth_flows.jpg)
+The flow below will guide you through the full OAuth connection process. Note that you only need to create OAuth credentials once.
+
+![](../../.gitbook/assets/authorization-oauth-flow.jpg)
 
 
 

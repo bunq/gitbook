@@ -6,14 +6,14 @@ The bunq API is based on the RESTful principles. It returns responses in the JSO
 
 ## Getting Started
 
-1. **Create a user account with your phone.** Afterwards, you can use this account to create an API key from which you can make API calls. You can create an API key either in our [developer portal ](https://developer.bunq.com)or in the bunq app \(_Profile → Security & Settings → Developers → API keys\)_.
-2. **Register a device.** A device can be a phone \(private\), computer or a server \(public\). You can register a new device by using the _installation_ and _device-server_ calls.
-3. **Open a session.** Sessions are temporary and expire in the same amount of time you have set for auto logout in your user account.
+Before you start sending API requests, you need to get an API key and activate it. API activation happens when you install it and link your IP address and device to it \(create an API context\). The steps below will guide you through what you need to do to start sending custom API requests.
+
+1. **Create an API key.** You can do it either in our [developer portal ](https://developer.bunq.com)or in the bunq app \(_Profile → Security & Settings → Developers → API keys\)_. If you want to test our sandbox first, our [bunq Developer ](https://developer.bunq.com)is the best place to start.
+2. **Register a device.** A device can be a phone \(private\), a computer, or a server \(public\). You can register a new device by using the `POST /installation` and `POST /device-server` calls. This will activate your API key. You only need to do this once.
+3. **Open a session.** Sessions are temporary and expire after the auto-logout time set for the user account. It can be changed in the bunq app.
 4. **Make your first call!**
 
-Here is an overview of what you can use to get started with the bunq API: 
-
-![](.gitbook/assets/getting-started-with-the-bunq-api-matrix.png)
+![](.gitbook/assets/api-context.jpg)
 
 {% hint style="info" %}
 Looking to start with the sandbox environment first? Jump to the [Sandbox page](https://beta.doc.bunq.com/basics/sandbox).
@@ -23,7 +23,7 @@ Looking to start with the sandbox environment first? Jump to the [Sandbox page](
 
 ## Versioning
 
-Developments in the financial sector, changing regulatory regimes and new feature requests require us to be flexible. This means we can iterate quickly to improve the API and related tooling. This also allows us to quickly process your feedback \(which we are happy to receive!\). Therefore, we have chosen not to attach any version numbers to the changes just yet. We will inform you in a timely manner of any important changes we make before they are deployed on together.bunq.com.
+Developments in the financial sector, changing regulatory regimes and new feature requests require us to be flexible. This means we can iterate quickly to improve the API and related tooling. Therefore, we have chosen not to attach any version numbers to the changes just yet. 
 
-Once the speed of iteration slows down and more developers start using the API and its sandbox we will start versioning the API using the version number in the HTTP URLs \(i.e. the `v1/` part of the path\). We will inform you when this happens.
+We will inform you in a timely manner of any important changes we make before they are deployed on together.bunq.com. You can also [subscribe to our API newsletter](https://bunq.us8.list-manage.com/subscribe?u=c00d0d6daea4e1cf7c863d52e&id=b08680cdc7) to make sure you don't miss any important updates. 
 

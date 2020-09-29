@@ -18,13 +18,17 @@ The parties _\(you and bunq\)_ exchange their public keys in the first step of t
 
 ## Creating API Context 
 
-Before you can start calling the bunq API, you must do the following:
+Before you can start calling the bunq API, you must create an API context, which you can do following these steps:
 
-* register your API key and IP address\(es\) via `POST /installation`;
-* register your device via `POST /device-server`;
+* register your API key and IP address\(es\) via `POST /installation` _\(only once to activate your API key\);_
+* register your device via `POST /device-server` _\(only once to activate your API key\);_
 * create a session via `POST /session-server`. 
 
-We call this intro "creating an API context". There are a couple of ways to carry out the sequence of steps. Let's dwell on each of them.
+{% hint style="info" %}
+If you are using OAuth to access a user account, you need to create an API context for the `access_token` you  receive upon [authorization token exchange](https://beta.doc.bunq.com/basics/oauth) too. 
+{% endhint %}
+
+There are a couple of ways to carry out the sequence of steps. Let's dwell on each of them.
 
 ### Using our SDKs
 
