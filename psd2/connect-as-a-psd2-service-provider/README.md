@@ -41,5 +41,9 @@ The flow below will guide you through the full OAuth connection process. Note th
 
 ![](../../.gitbook/assets/authorization-oauth-flow.jpg)
 
+{% page-ref page="aisp.md" %}
 
+{% page-ref page="initiate-payments-as-a-pisp.md" %}
+
+{% page-ref page="cbpii.md" %}
 

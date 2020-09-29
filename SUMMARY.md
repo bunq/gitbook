@@ -35,6 +35,7 @@
 * [Connect as a PSD2 service provider](psd2/connect-as-a-psd2-service-provider/README.md)
   * [AISP](psd2/connect-as-a-psd2-service-provider/aisp.md)
   * [PISP](psd2/connect-as-a-psd2-service-provider/initiate-payments-as-a-pisp.md)
+  * [CBPII](psd2/connect-as-a-psd2-service-provider/cbpii.md)
 
 ## Other
 
