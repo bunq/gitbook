@@ -9,9 +9,6 @@ Stay up-to-date with the bunq API updates! [Subscribe to our API newsletter](htt
 ### Near future
 
 1. Due to internal backend changes, all active [device-server](https://doc.bunq.com/#/device-server/Create_DeviceServer) installations created before April 9, 2019, will stop being validated \(previously announced dates: January 15, 2020; April 8, 2020\). To communicate with the bunq API again, [create a new API context](https://beta.doc.bunq.com/basics/authentication#creating-api-context).
-2. We are removing [/sandbox-user](https://doc.bunq.com/#/sandbox-user/Create_SandboxUser) on \(previously announced date: June 10, 2020\). You can use the following endpoints instead:
-   * `/sandbox-user-company`
-   * `/sandbox-user-person`
 
 ### November 4, 2020
 
@@ -26,6 +23,13 @@ If your application is using Connect as an authentication method, please switch 
 {% endhint %}
 
 ## Released
+
+### September 10, 2020
+
+We removed the `/sandbox-user` endpoint. You can use the following endpoints instead:
+
+* `/sandbox-user-company`
+* `/sandbox-user-person`
 
 ### July 1, 2020
 
